@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bawlad – Stay Tuned</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #242124;
+      overflow: hidden;
+      position: relative;
+    }
+    .liquid-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #FAFAFA;
+      clip-path: ellipse(0% 0% at 50% 52.5px);
+      animation: revealEllipse 3s ease-out forwards;
+      z-index: 1;
+    }
+        .liquid-bottom {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #FAFAFA;
+      clip-path: ellipse(0% 0% at 50% calc(100% - 60px));
+      animation: revealBottom 2s ease-out 3s forwards;
+      z-index: 1;
+    }
+    .logo {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      z-index: 3;
+    }
+    .logo img {
+      width: auto;
+      height: 60px;
+      object-fit: contain;
+    }
+    .tagline {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #FAFAFA;
+      font-size: 26px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      z-index: 2;
+      text-align: center;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+      text-transform: lowercase;
+      animation: pulseText 6s ease-in-out infinite;
+    }
+    .email-form {
+      position: absolute;
+      bottom: 40px;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      opacity: 0;
+      animation: fadeIn 2s ease 5s forwards;
+    }
+    .email-form input[type="email"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      margin-right: 8px;
+    }
+    .email-form button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #242124;
+      color: #FAFAFA;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    @keyframes revealEllipse {
+      0% { clip-path: ellipse(0% 0% at 50% 52.5px); }
+      100% { clip-path: ellipse(21% 7% at 50% 52.5px); }
+    }
+    @keyframes revealBottom {
+      0% { clip-path: ellipse(0% 0% at 50% calc(100% - 60px)); }
+      100% { clip-path: ellipse(40% 10% at 50% calc(100% - 60px)); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes pulseText {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.06); }
+    }
+          30% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(8);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="Bawlad Logo Full.png" alt="Bawlad Logo">
+  </div>
+  <div class="liquid-overlay"></div>
+    <div class="liquid-bottom"></div>
+  <div class="tagline">
+    movement is being born in silence.<br>
+    stay tuned.
+  </div>
+  <form class="email-form" action="mailto:gitansh@bawlad.com" method="post" enctype="text/plain">
+    <input type="email" name="email" placeholder="Your email" required>
+    <button type="submit">Notify Me</button>
+  </form>
+</body>
+</html>
