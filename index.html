@@ -99,6 +99,19 @@
       cursor: pointer;
       font-size: 16px; /* EDIT BUTTON TEXT SIZE HERE */
     }
+    
+    .instagram-link {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      z-index: 3;
+    }
+
+    .instagram-link img {
+      height: 40px; /* You can adjust size here */
+      width: 40px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -114,5 +127,8 @@
     <input type="email" name="email" placeholder="Your email" required />
     <button type="submit">Notify Me</button>
   </form>
+  <a class="instagram-link" href="https://instagram.com/bawladofficial" target="_blank">
+  <img src="instagram-icon.png" alt="Instagram">
+</a>
 </body>
 </html>
